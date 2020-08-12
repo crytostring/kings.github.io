@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Elasticsearch</title>
+      <link href="/kings.github.io/2020/08/12/article-title/"/>
+      <url>/kings.github.io/2020/08/12/article-title/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Elasticsearch简单介绍"><a href="#Elasticsearch简单介绍" class="headerlink" title="Elasticsearch简单介绍"></a>Elasticsearch简单介绍</h2><blockquote><p>Elasticsearch (ES)是一个基于Lucene构建的开源、分布式、RESTful 接口全文搜索引擎。Elasticsearch 还是一个分布式文档数据库，其中每个字段均是被索引的数据且可被搜索，它能够扩展至数以百计的服务器存储以及处理PB级的数据。它可以在很短的时间内在储、搜索和分析大量的数据。它通常作为具有复杂搜索场景情况下的核心发动机。<br>Elasticsearch就是为高可用和可扩展而生的。可以通过购置性能更强的服务器来完成。</p></blockquote><h2 id="Elasticsearch优势"><a href="#Elasticsearch优势" class="headerlink" title="Elasticsearch优势"></a>Elasticsearch优势</h2><blockquote><p>横向可扩展性:只需要增加台服务器，做一点儿配置，启动一下Elasticsearch就可以并入集群。<br>分片机制提供更好的分布性:同一个索引分成多个分片(sharding), 这点类似于HDFS的块机制;分而治之的方式可提升处理效率。<br>高可用:提供复制( replica) 机制，一个分片可以设置多个复制，使得某台服务器在宕机的情况下，集群仍旧可以照常运行，并会把服务器宕机丢失的数据信息复制恢复到其他可用节点上。<br>口使用简单:共需一条命令就可以下载文件，然后很快就能搭建一一个站内搜索引擎。</p></blockquote><h2 id="Elasticsearch应用场景"><a href="#Elasticsearch应用场景" class="headerlink" title="Elasticsearch应用场景"></a>Elasticsearch应用场景</h2><blockquote><p>大型分布式日志分析系统ELK  elasticsearch（存储日志）+logstash(收集日志)+kibana(展示数据)<br>大型电商商品搜索系统、网盘搜索引擎等。</p></blockquote><h2 id="Elasticsearch存储结构"><a href="#Elasticsearch存储结构" class="headerlink" title="Elasticsearch存储结构"></a>Elasticsearch存储结构</h2><blockquote><p>Elasticsearch是文件存储，Elasticsearch是面向文档型数据库，一条数据在这里就是一个文档，用JSON作为文档序列化的格式，比如下面这条用户数据：</p></blockquote><pre class=" language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>    <span class="token property">"name"</span> <span class="token operator">:</span> <span class="token string">"yushengjun"</span><span class="token punctuation">,</span>    <span class="token property">"sex"</span> <span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>    <span class="token property">"age"</span> <span class="token operator">:</span> <span class="token number">25</span>&amp;#<span class="token number">125</span><span class="token punctuation">;</span></code></pre><blockquote><p>关系数据库     ⇒ 数据库 ⇒ 表    ⇒ 行    ⇒ 列(Columns)<br>Elasticsearch    ⇒ 索引(Index)   ⇒ 类型(type)  ⇒ 文档(Docments)  ⇒ 字段(Fields)</p></blockquote><h2 id="Linux环境安装Elasticsearch"><a href="#Linux环境安装Elasticsearch" class="headerlink" title="Linux环境安装Elasticsearch"></a>Linux环境安装Elasticsearch</h2><h3 id="安装JDK环境变量"><a href="#安装JDK环境变量" class="headerlink" title="安装JDK环境变量"></a>安装JDK环境变量</h3><pre><code>export JAVA_HOME=/usr/local/jdk1.8.0_181export PATH=$JAVA_HOME/bin:$PATHexport CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jarsource /etc/profile</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Elasticsearch </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/kings.github.io/2020/08/12/hello-world/"/>
+      <url>/kings.github.io/2020/08/12/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
